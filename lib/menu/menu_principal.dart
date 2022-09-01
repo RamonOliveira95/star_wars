@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttermoji/fluttermoji.dart';
+import 'package:star_wars/personagens/personagens_filmes.dart';
 import '../avatar/editar_avatar.dart';
 
 class Menu extends StatefulWidget {
@@ -39,9 +40,10 @@ class _MyWidgetState extends State<Menu> {
               children: [
                 ElevatedButton.icon(
                   onPressed: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const EditandoAvatar())),
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const EditandoAvatar()),
+                  ),
                   icon: const Icon(Icons.edit),
                   label: const SizedBox(
                     height: 20,
@@ -69,7 +71,11 @@ class _MyWidgetState extends State<Menu> {
                   width: 120,
                   height: 50,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const PersonagensFilmes()),
+                  ),
                     child: const Text("Personagens"),
                   ),
                 ),
