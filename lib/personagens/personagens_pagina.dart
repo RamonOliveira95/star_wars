@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:star_wars/favoritos/favoritos.dart';
 import 'package:star_wars/personagens/personagem.dart';
 
-class PersonagensFilmes extends StatefulWidget {
-  const PersonagensFilmes({Key? key}) : super(key: key);
-
+class PersonagensPagina extends StatefulWidget {
+  const PersonagensPagina({Key? key}) : super(key: key);
   @override
-  State<PersonagensFilmes> createState() => _PersonagensFilmesState();
+  State<PersonagensPagina> createState() => _PersonagensPaginaState();
 }
 
-class _PersonagensFilmesState extends State<PersonagensFilmes> {
+class _PersonagensPaginaState extends State<PersonagensPagina> {
   Personagem personagem = Personagem();
-
   @override
   Widget build(BuildContext context) {
+    var personagemFavorito = Provider.of<Favoritos>(context);
     return Scaffold(
       appBar: AppBar(
         title: const Text("Personagens"),
@@ -21,14 +22,30 @@ class _PersonagensFilmesState extends State<PersonagensFilmes> {
         padding: const EdgeInsets.all(8),
         child: ListView.builder(
           itemCount: personagem.nome.length,
-          itemBuilder: (context, i){
+          itemBuilder: (context, i) {
             dynamic contato = personagem.nome[i];
-            var avatar = CircleAvatar(backgroundImage: NetworkImage(contato["avatar"]),);
-            return ListTile(
-              leading: avatar,
-              title: Text(contato["nome"]),
-              trailing: IconButton(onPressed: (){}, icon: Icon(Icons.favorite)),
+            var avatar = CircleAvatar(
+              backgroundImage: NetworkImage(contato["avatar"]),
             );
+            return ListTile(
+                leading: avatar,
+                title: Text(contato["nome"]),
+                trailing: IconButton(
+                  onPressed: () {
+                    !personagemFavorito.list.contains(contato["nome"]) ? 
+                    personagemFavorito.add(contato["nome"]) : 
+                    personagemFavorito.remove(contato["nome"]);
+
+                  },
+                  icon: personagemFavorito.list.contains(contato["nome"])
+                      ? const Icon(
+                          Icons.favorite,
+                          color: Colors.red,
+                        )
+                      : const Icon(
+                          Icons.favorite_border,
+                        ),
+                ));
           },
         ),
       ),

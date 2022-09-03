@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:fluttermoji/fluttermoji.dart';
-import 'package:star_wars/personagens/personagens_filmes.dart';
+import 'package:star_wars/favoritos/favoritos_pagina.dart';
+import 'package:star_wars/filmes/filmes_pagina.dart';
+import 'package:star_wars/personagens/personagens_pagina.dart';
+import 'package:star_wars/site/site_oficial.dart';
 import '../avatar/editar_avatar.dart';
 
 class Menu extends StatefulWidget {
@@ -26,7 +29,11 @@ class _MyWidgetState extends State<Menu> {
                   width: 100,
                   height: 50,
                   child: ElevatedButton(
-                    onPressed: () {},
+                     onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => SiteOficial()),
+                  ),
                     child: const Text("Site Oficial"),
                   ),
                 ),
@@ -63,7 +70,11 @@ class _MyWidgetState extends State<Menu> {
                   width: 80,
                   height: 50,
                   child: ElevatedButton(
-                    onPressed: () {},
+                      onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const FilmesPagina()),
+                  ),
                     child: const Text("Filmes"),
                   ),
                 ),
@@ -74,7 +85,7 @@ class _MyWidgetState extends State<Menu> {
                     onPressed: () => Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const PersonagensFilmes()),
+                        builder: (context) => const PersonagensPagina()),
                   ),
                     child: const Text("Personagens"),
                   ),
@@ -83,7 +94,11 @@ class _MyWidgetState extends State<Menu> {
                   width: 90,
                   height: 50,
                   child: ElevatedButton(
-                    onPressed: () {},
+                      onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const FavoritosPagina()),
+                  ),
                     child: const Text("Favoritos"),
                   ),
                 ),

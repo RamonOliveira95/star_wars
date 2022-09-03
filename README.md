@@ -1,16 +1,19 @@
-# star_wars
+# STAR WARS - Sobre o projeto
 
-A new Flutter project.
+- Projeto criado com a intenção de mostrar as habilidade obtidas até o momento;
+- Nessa aplicação é possível ver os personagens e filmes do Star Wars;
+- Na parte dos personagens é criado linhas com a imagem, nome e opção de favoritar cada um;
+- Na parte dos filmes tem a numeração ao lado esquerdo de cada título e ao lado direito a opção de salvar;
+- A aba do avatar foi criada utilizando a biblioteca fluttermoji, onde é possível fazer alterações no avatar;
+- A aba do Site Oficial leva para uma nova página onde nela será possível acessar o site dentro da aplicação, graças a biblioteca InAppWebView.
 
-## Getting Started
+# Requisições Faltantes
 
-This project is a starting point for a Flutter application.
+- Banco de dados para armazenar as escolhas feitas;
+- Conseguir levar o que foi selecionado como favorito para a página de favoritos;
+- Utilizar API para puxar os filmes e personagens.
 
-A few resources to get you started if this is your first Flutter project:
+# Como rodar a aplicação
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Os testes internos foram feitos através do VS Code, buildando em emulador do Windows, recomendo a utilização do mesmo;
+- Para rodar basta apenas baixar o código e executar que a aplicação irá abrir.
