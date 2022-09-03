@@ -1,3 +1,43 @@
+import 'package:flutter/material.dart';
+import 'package:star_wars/personagens/personagem.dart';
+
+class PersonagensFilmes extends StatefulWidget {
+  const PersonagensFilmes({Key? key}) : super(key: key);
+
+  @override
+  State<PersonagensFilmes> createState() => _PersonagensFilmesState();
+}
+
+class _PersonagensFilmesState extends State<PersonagensFilmes> {
+  Personagem personagem = Personagem();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Personagens"),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(8),
+        child: ListView.builder(
+          itemCount: personagem.nome.length,
+          itemBuilder: (context, i){
+            dynamic contato = personagem.nome[i];
+            var avatar = CircleAvatar(backgroundImage: NetworkImage(contato["avatar"]),);
+            return ListTile(
+              leading: avatar,
+              title: Text(contato["nome"]),
+              trailing: IconButton(onPressed: (){}, icon: Icon(Icons.favorite)),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+
+//TENTATIVA 0.4
+/*
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
@@ -53,7 +93,7 @@ class _PersonagensFilmesState extends State<PersonagensFilmes> {
     }
   }
 }
-
+*/
 
 
 //TENTATIVA 0.3

@@ -1,3 +1,42 @@
+class Personagem{
+  final nome = [
+    {"nome":"Luke Skywalker", "avatar":"http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/luke-300x300.png"},
+    {"nome":"Princesa Leia", "avatar":"http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/leia-1-300x300.png"},
+    {"nome":"Han Solo", "avatar":"http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/han_solo-300x300.png"},
+    {"nome":"Darth Vader", "avatar":"http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/darth_vader-300x300.png"},
+    {"nome": "R2-D2", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/R2D2-300x300.png"},
+    {"nome": "C-3PO", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/C3PO-300x300.png"},
+    {"nome": "Chewbacca", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/chewbacca-300x300.png"},
+    {"nome": "Obi-Wan Kenobi", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/obi_wan_kenobi-300x300.png"},
+    {"nome": "Yoda", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/yoda-300x300.png"},
+    {"nome": "Padmé Amidala", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/amidala-300x300.png"},
+    {"nome": "Stormtrooper", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/stormtrooper-300x300.png"},
+    {"nome": "Darth Sidious", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/darth_sidious-1-300x300.png"},
+    {"nome": "Lando Calrissian", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/lando-300x300.png"},
+    {"nome": "Rey", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/rey-300x300.png"},
+    {"nome": "Finn", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/finn-300x300.png"},
+    {"nome": "Poe Dameron", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/poe_dameron-300x300.png"},
+    {"nome": "Kylo Ren", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/kylo_ren-300x300.png"},
+    {"nome": "General Hux", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/general_hux-300x300.png"},
+    {"nome": "Capitã Phasma", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/pashma-300x300.png"},
+    {"nome": "Qui-Gon Jinn", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/quin_gon_jinn-300x300.png"},
+    {"nome": "Mace Windu", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/mace-300x300.png"},
+    {"nome": "Jabba o Hutt", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/jabba-300x300.png"},
+    {"nome": "Boba Fett", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/boba-300x300.png"},
+    {"nome": "Conde Dooku", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/dooku-300x300.png"},
+    {"nome": "Governador Tarkin", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/general_tarkin-1-300x300.png"},
+    {"nome": "Almirante Ackbar", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/ackbar-300x300.png"},
+    {"nome": "General Grievous", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/grievous-300x300.png"},
+    {"nome": "Jango Fett", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/jango-300x300.png"},
+    {"nome": "Darth Maul", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/darth_maul-300x300.png"},
+    {"nome": "Jar Jar Binks", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/jar_jar-300x300.png"},
+    {"nome": "Palpatine", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/palpatine-1-300x300.png"},
+    {"nome": "Anakin Skywalker", "avatar": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/anakin-300x300.png"},
+  ];
+}
+
+/*
+//Tentativas de implementar API
 class Personagem {
   String? name;
   String? height;
@@ -72,6 +111,7 @@ class Personagem {
     return data;
   }
 }
+*/
 
 /*
 class Personagem {
