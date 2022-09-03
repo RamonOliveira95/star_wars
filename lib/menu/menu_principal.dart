@@ -17,6 +17,10 @@ class _MyWidgetState extends State<Menu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Star Wars"),
+        centerTitle: true,
+      ),
       body: SizedBox(
         height: double.infinity,
         width: double.infinity,
@@ -29,11 +33,10 @@ class _MyWidgetState extends State<Menu> {
                   width: 100,
                   height: 50,
                   child: ElevatedButton(
-                     onPressed: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => SiteOficial()),
-                  ),
+                    onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SiteOficial()),
+                    ),
                     child: const Text("Site Oficial"),
                   ),
                 ),
@@ -70,11 +73,11 @@ class _MyWidgetState extends State<Menu> {
                   width: 80,
                   height: 50,
                   child: ElevatedButton(
-                      onPressed: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const FilmesPagina()),
-                  ),
+                    onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const FilmesPagina()),
+                    ),
                     child: const Text("Filmes"),
                   ),
                 ),
@@ -83,10 +86,10 @@ class _MyWidgetState extends State<Menu> {
                   height: 50,
                   child: ElevatedButton(
                     onPressed: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const PersonagensPagina()),
-                  ),
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const PersonagensPagina()),
+                    ),
                     child: const Text("Personagens"),
                   ),
                 ),
@@ -94,11 +97,11 @@ class _MyWidgetState extends State<Menu> {
                   width: 90,
                   height: 50,
                   child: ElevatedButton(
-                      onPressed: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const FavoritosPagina()),
-                  ),
+                    onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const FavoritosPagina()),
+                    ),
                     child: const Text("Favoritos"),
                   ),
                 ),
