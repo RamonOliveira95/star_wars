@@ -12,10 +12,8 @@
 - Banco de dados para armazenar as escolhas feitas;
 - Conseguir levar o que foi selecionado como favorito para a página de favoritos;
 - Utilizar API para puxar os filmes e personagens;
-- Foi notado que na versão final em .apk na parte dos personagens não aparece as imagens ao lado do nome, apenas na versão com o VSCode com o emulador Windows.
 
 # Como rodar a aplicação
 
 - Os testes internos foram feitos através do VS Code, buildando em emulador do Windows, recomendo a utilização do mesmo;
 - Para rodar basta apenas baixar o código e executar que a aplicação irá abrir;
-- A versão final fo build está na pasta raíz com o nome "StarWars_BuildFinal.apk".

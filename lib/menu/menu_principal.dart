@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fluttermoji/fluttermoji.dart';
 import 'package:star_wars/favoritos/favoritos_pagina.dart';
 import 'package:star_wars/filmes/filmes_pagina.dart';
+import 'package:star_wars/menu/menu_escolhido.dart';
 import 'package:star_wars/personagens/personagens_pagina.dart';
-import 'package:star_wars/site/site_oficial.dart';
+import 'package:star_wars/titulo.dart';
 import '../avatar/editar_avatar.dart';
 
 class Menu extends StatefulWidget {
@@ -18,8 +18,8 @@ class _MyWidgetState extends State<Menu> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Star Wars"),
-        centerTitle: true,
+        toolbarHeight: 110,
+        title: const Titulo(),
       ),
       body: SizedBox(
         height: double.infinity,
@@ -27,32 +27,14 @@ class _MyWidgetState extends State<Menu> {
         child: Column(
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(
-                  width: 100,
-                  height: 50,
-                  child: ElevatedButton(
-                    onPressed: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => SiteOficial()),
-                    ),
-                    child: const Text("Site Oficial"),
-                  ),
-                ),
-                FluttermojiCircleAvatar(
-                  radius: 50,
-                ),
-              ],
-            ),
-            Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 ElevatedButton.icon(
                   onPressed: () => Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const EditandoAvatar()),
+                      builder: (context) => const EditandoAvatar(),
+                    ),
                   ),
                   icon: const Icon(Icons.edit),
                   label: const SizedBox(
@@ -88,25 +70,31 @@ class _MyWidgetState extends State<Menu> {
                     onPressed: () => Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const PersonagensPagina()),
+                        builder: (context) => const PersonagensPagina(),
+                      ),
                     ),
                     child: const Text("Personagens"),
                   ),
                 ),
                 SizedBox(
-                  width: 90,
+                  width: 100,
                   height: 50,
                   child: ElevatedButton(
                     onPressed: () => Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const FavoritosPagina()),
+                        builder: (context) => const FavoritosPagina(),
+                      ),
                     ),
                     child: const Text("Favoritos"),
                   ),
                 ),
               ],
-            )
+            ),
+            Container(
+              height: 50,
+            ),
+            MenuEscolhido()
           ],
         ),
       ),
